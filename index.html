@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dress-Up Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main Menu -->
+    <div class="main-menu">
+        <img src="Mainmenu.png" alt="Main Menu Image">
+        <button onclick="enterGame()">Play</button>
+    </div>
+
+    <!-- Game Container -->
+    <div class="game-container">
+        <div class="base-container">
+            <!-- Base character image -->
+            <img id="base-image" src="Base.png" alt="Base Image">
+            
+            <!-- Boy Left Eye (Category 1) -->
+<img id="category1-item1" class="layer left-eye" src="BoyLeftEye1.png" alt="Boy Left Eye 1" style="visibility: visible;">
+<img id="category1-item2" class="layer left-eye" src="BoyLeftEye2.png" alt="Boy Left Eye 2" style="visibility: hidden;">
+<img id="category1-item3" class="layer left-eye" src="BoyLeftEye3.png" alt="Boy Left Eye 3" style="visibility: hidden;">
+<img id="category1-item4" class="layer left-eye" src="BoyLeftEye4.png" alt="Boy Left Eye 4" style="visibility: hidden;">
+<img id="category1-item5" class="layer left-eye" src="BoyLeftEye5.png" alt="Boy Left Eye 5" style="visibility: hidden;">
+<img id="category1-item6" class="layer left-eye" src="BoyLeftEye6.png" alt="Boy Left Eye 6" style="visibility: hidden;">
+<img id="category1-item7" class="layer left-eye" src="BoyLeftEye7.png" alt="Boy Left Eye 7" style="visibility: hidden;">
+<img id="category1-item8" class="layer left-eye" src="BoyLeftEye8.png" alt="Boy Left Eye 8" style="visibility: hidden;">
+<img id="category1-item9" class="layer left-eye" src="BoyLeftEye9.png" alt="Boy Left Eye 9" style="visibility: hidden;">
+<img id="category1-item10" class="layer left-eye" src="BoyLeftEye10.png" alt="Boy Left Eye 10" style="visibility: hidden;">
+
+<!-- Boy Right Eye (Category 2) -->
+<img id="category2-item1" class="layer right-eye" src="BoyRightEye1.png" alt="Boy Right Eye 1" style="visibility: visible;">
+<img id="category2-item2" class="layer right-eye" src="BoyRightEye2.png" alt="Boy Right Eye 2" style="visibility: hidden;">
+<img id="category2-item3" class="layer right-eye" src="BoyRightEye3.png" alt="Boy Right Eye 3" style="visibility: hidden;">
+<img id="category2-item4" class="layer right-eye" src="BoyRightEye4.png" alt="Boy Right Eye 4" style="visibility: hidden;">
+<img id="category2-item5" class="layer right-eye" src="BoyRightEye5.png" alt="Boy Right Eye 5" style="visibility: hidden;">
+<img id="category2-item6" class="layer right-eye" src="BoyRightEye6.png" alt="Boy Right Eye 6" style="visibility: hidden;">
+<img id="category2-item7" class="layer right-eye" src="BoyRightEye7.png" alt="Boy Right Eye 7" style="visibility: hidden;">
+<img id="category2-item8" class="layer right-eye" src="BoyRightEye8.png" alt="Boy Right Eye 8" style="visibility: hidden;">
+<img id="category2-item9" class="layer right-eye" src="BoyRightEye9.png" alt="Boy Right Eye 9" style="visibility: hidden;">
+<img id="category2-item10" class="layer right-eye" src="BoyRightEye10.png" alt="Boy Right Eye 10" style="visibility: hidden;">
+
+<!-- Boy Mouth (Category 3) -->
+<img id="category3-item1" class="layer mouth" src="BoyMouth1.png" alt="Boy Mouth 1" style="visibility: visible;">
+<img id="category3-item2" class="layer mouth" src="BoyMouth2.png" alt="Boy Mouth 2" style="visibility: hidden;">
+<img id="category3-item3" class="layer mouth" src="BoyMouth3.png" alt="Boy Mouth 3" style="visibility: hidden;">
+<img id="category3-item4" class="layer mouth" src="BoyMouth4.png" alt="Boy Mouth 4" style="visibility: hidden;">
+<img id="category3-item5" class="layer mouth" src="BoyMouth5.png" alt="Boy Mouth 5" style="visibility: hidden;">
+<img id="category3-item6" class="layer mouth" src="BoyMouth6.png" alt="Boy Mouth 6" style="visibility: hidden;">
+<img id="category3-item7" class="layer mouth" src="BoyMouth7.png" alt="Boy Mouth 7" style="visibility: hidden;">
+<img id="category3-item8" class="layer mouth" src="BoyMouth8.png" alt="Boy Mouth 8" style="visibility: hidden;">
+<img id="category3-item9" class="layer mouth" src="BoyMouth9.png" alt="Boy Mouth 9" style="visibility: hidden;">
+<img id="category3-item10" class="layer mouth" src="BoyMouth10.png" alt="Boy Mouth 10" style="visibility: hidden;">
+
+<!-- Girl Left Eye (Category 4) -->
+<img id="category4-item1" class="layer left-eye" src="GirlLeftEye1.png" alt="Girl Left Eye 1" style="visibility: visible;">
+<img id="category4-item2" class="layer left-eye" src="GirlLeftEye2.png" alt="Girl Left Eye 2" style="visibility: hidden;">
+<img id="category4-item3" class="layer left-eye" src="GirlLeftEye3.png" alt="Girl Left Eye 3" style="visibility: hidden;">
+<img id="category4-item4" class="layer left-eye" src="GirlLeftEye4.png" alt="Girl Left Eye 4" style="visibility: hidden;">
+<img id="category4-item5" class="layer left-eye" src="GirlLeftEye5.png" alt="Girl Left Eye 5" style="visibility: hidden;">
+<img id="category4-item6" class="layer left-eye" src="GirlLeftEye6.png" alt="Girl Left Eye 6" style="visibility: hidden;">
+<img id="category4-item7" class="layer left-eye" src="GirlLeftEye7.png" alt="Girl Left Eye 7" style="visibility: hidden;">
+<img id="category4-item8" class="layer left-eye" src="GirlLeftEye8.png" alt="Girl Left Eye 8" style="visibility: hidden;">
+<img id="category4-item9" class="layer left-eye" src="GirlLeftEye9.png" alt="Girl Left Eye 9" style="visibility: hidden;">
+<img id="category4-item10" class="layer left-eye" src="GirlLeftEye10.png" alt="Girl Left Eye 10" style="visibility: hidden;">
+
+<!-- Girl Right Eye (Category 5) -->
+<img id="category5-item1" class="layer right-eye" src="GirlRightEye1.png" alt="Girl Right Eye 1" style="visibility: visible;">
+<img id="category5-item2" class="layer right-eye" src="GirlRightEye2.png" alt="Girl Right Eye 2" style="visibility: hidden;">
+<img id="category5-item3" class="layer right-eye" src="GirlRightEye3.png" alt="Girl Right Eye 3" style="visibility: hidden;">
+<img id="category5-item4" class="layer right-eye" src="GirlRightEye4.png" alt="Girl Right Eye 4" style="visibility: hidden;">
+<img id="category5-item5" class="layer right-eye" src="GirlRightEye5.png" alt="Girl Right Eye 5" style="visibility: hidden;">
+<img id="category5-item6" class="layer right-eye" src="GirlRightEye6.png" alt="Girl Right Eye 6" style="visibility: hidden;">
+<img id="category5-item7" class="layer right-eye" src="GirlRightEye7.png" alt="Girl Right Eye 7" style="visibility: hidden;">
+<img id="category5-item8" class="layer right-eye" src="GirlRightEye8.png" alt="Girl Right Eye 8" style="visibility: hidden;">
+<img id="category5-item9" class="layer right-eye" src="GirlRightEye9.png" alt="Girl Right Eye 9" style="visibility: hidden;">
+<img id="category5-item10" class="layer right-eye" src="GirlRightEye10.png" alt="Girl Right Eye 10" style="visibility: hidden;">
+
+<!-- Girl Mouth (Category 6) -->
+<img id="category6-item1" class="layer mouth" src="GirlMouth1.png" alt="Girl Mouth 1" style="visibility: visible;">
+<img id="category6-item2" class="layer mouth" src="GirlMouth2.png" alt="Girl Mouth 2" style="visibility: hidden;">
+<img id="category6-item3" class="layer mouth" src="GirlMouth3.png" alt="Girl Mouth 3" style="visibility: hidden;">
+<img id="category6-item4" class="layer mouth" src="GirlMouth4.png" alt="Girl Mouth 4" style="visibility: hidden;">
+<img id="category6-item5" class="layer mouth" src="GirlMouth5.png" alt="Girl Mouth 5" style="visibility: hidden;">
+<img id="category6-item6" class="layer mouth" src="GirlMouth6.png" alt="Girl Mouth 6" style="visibility: hidden;">
+<img id="category6-item7" class="layer mouth" src="GirlMouth7.png" alt="Girl Mouth 7" style="visibility: hidden;">
+<img id="category6-item8" class="layer mouth" src="GirlMouth8.png" alt="Girl Mouth 8" style="visibility: hidden;">
+<img id="category6-item9" class="layer mouth" src="GirlMouth9.png" alt="Girl Mouth 9" style="visibility: hidden;">
+<img id="category6-item10" class="layer mouth" src="GirlMouth10.png" alt="Girl Mouth 10" style="visibility: hidden;">
+
+<!-- Boy Underpants (Category 7) -->
+<img id="category7-item1" class="layer underpants" src="BoyUnderpants1.png" alt="Boy Underpants 1" style="visibility: hidden;">
+<img id="category7-item2" class="layer underpants" src="BoyUnderpants2.png" alt="Boy Underpants 2" style="visibility: hidden;">
+<img id="category7-item3" class="layer underpants" src="BoyUnderpants3.png" alt="Boy Underpants 3" style="visibility: hidden;">
+<img id="category7-item4" class="layer underpants" src="BoyUnderpants4.png" alt="Boy Underpants 4" style="visibility: hidden;">
+<img id="category7-item5" class="layer underpants" src="BoyUnderpants5.png" alt="Boy Underpants 5" style="visibility: hidden;">
+<img id="category7-item6" class="layer underpants" src="BoyUnderpants6.png" alt="Boy Underpants 6" style="visibility: hidden;">
+<img id="category7-item7" class="layer underpants" src="BoyUnderpants7.png" alt="Boy Underpants 7" style="visibility: hidden;">
+<img id="category7-item8" class="layer underpants" src="BoyUnderpants8.png" alt="Boy Underpants 8" style="visibility: hidden;">
+<img id="category7-item9" class="layer underpants" src="BoyUnderpants9.png" alt="Boy Underpants 9" style="visibility: hidden;">
+<img id="category7-item10" class="layer underpants" src="BoyUnderpants10.png" alt="Boy Underpants 10" style="visibility: hidden;">
+
+<!-- Girl Panties (Category 8) -->
+<img id="category8-item1" class="layer panties" src="GirlPanties1.png" alt="Girl Panties 1" style="visibility: visible;">
+<img id="category8-item2" class="layer panties" src="GirlPanties2.png" alt="Girl Panties 2" style="visibility: hidden;">
+<img id="category8-item3" class="layer panties" src="GirlPanties3.png" alt="Girl Panties 3" style="visibility: hidden;">
+<img id="category8-item4" class="layer panties" src="GirlPanties4.png" alt="Girl Panties 4" style="visibility: hidden;">
+<img id="category8-item5" class="layer panties" src="GirlPanties5.png" alt="Girl Panties 5" style="visibility: hidden;">
+<img id="category8-item6" class="layer panties" src="GirlPanties6.png" alt="Girl Panties 6" style="visibility: hidden;">
+<img id="category8-item7" class="layer panties" src="GirlPanties7.png" alt="Girl Panties 7" style="visibility: hidden;">
+<img id="category8-item8" class="layer panties" src="GirlPanties8.png" alt="Girl Panties 8" style="visibility: hidden;">
+<img id="category8-item9" class="layer panties" src="GirlPanties9.png" alt="Girl Panties 9" style="visibility: hidden;">
+<img id="category8-item10" class="layer panties" src="GirlPanties10.png" alt="Girl Panties 10" style="visibility: hidden;">
+
+<!-- Boy Bra (Category 9) -->
+<img id="category9-item1" class="layer boybra" src="BoyBra1.png" alt="Boy Bra 1" style="visibility: hidden;">
+<img id="category9-item2" class="layer boybra" src="BoyBra2.png" alt="Boy Bra 2" style="visibility: hidden;">
+<img id="category9-item3" class="layer boybra" src="BoyBra3.png" alt="Boy Bra 3" style="visibility: hidden;">
+<img id="category9-item4" class="layer boybra" src="BoyBra4.png" alt="Boy Bra 4" style="visibility: hidden;">
+<img id="category9-item5" class="layer boybra" src="BoyBra5.png" alt="Boy Bra 5" style="visibility: hidden;">
+<img id="category9-item6" class="layer boybra" src="BoyBra6.png" alt="Boy Bra 6" style="visibility: hidden;">
+<img id="category9-item7" class="layer boybra" src="BoyBra7.png" alt="Boy Bra 7" style="visibility: hidden;">
+<img id="category9-item8" class="layer boybra" src="BoyBra8.png" alt="Boy Bra 8" style="visibility: hidden;">
+<img id="category9-item9" class="layer boybra" src="BoyBra9.png" alt="Boy Bra 9" style="visibility: hidden;">
+<img id="category9-item10" class="layer boybra" src="BoyBra10.png" alt="Boy Bra 10" style="visibility: hidden;">
+
+<!-- Girl Bra (Category 10) -->
+<img id="category10-item1" class="layer girlbra" src="GirlBra1.png" alt="Girl Bra 1" style="visibility: visible;">
+<img id="category10-item2" class="layer girlbra" src="GirlBra2.png" alt="Girl Bra 2" style="visibility: hidden;">
+<img id="category10-item3" class="layer girlbra" src="GirlBra3.png" alt="Girl Bra 3" style="visibility: hidden;">
+<img id="category10-item4" class="layer girlbra" src="GirlBra4.png" alt="Girl Bra 4" style="visibility: hidden;">
+<img id="category10-item5" class="layer girlbra" src="GirlBra5.png" alt="Girl Bra 5" style="visibility: hidden;">
+<img id="category10-item6" class="layer girlbra" src="GirlBra6.png" alt="Girl Bra 6" style="visibility: hidden;">
+<img id="category10-item7" class="layer girlbra" src="GirlBra7.png" alt="Girl Bra 7" style="visibility: hidden;">
+<img id="category10-item8" class="layer girlbra" src="GirlBra8.png" alt="Girl Bra 8" style="visibility: hidden;">
+<img id="category10-item9" class="layer girlbra" src="GirlBra9.png" alt="Girl Bra 9" style="visibility: hidden;">
+<img id="category10-item10" class="layer girlbra" src="GirlBra10.png" alt="Girl Bra 10" style="visibility: hidden;">
+
+<!-- Boy Boxers (Category 11) -->
+<img id="category11-item1" class="layer boyboxers" src="BoyBoxers1.png" alt="Boy Boxers 1" style="visibility: visible;">
+<img id="category11-item2" class="layer boyboxers" src="BoyBoxers2.png" alt="Boy Boxers 2" style="visibility: hidden;">
+<img id="category11-item3" class="layer boyboxers" src="BoyBoxers3.png" alt="Boy Boxers 3" style="visibility: hidden;">
+<img id="category11-item4" class="layer boyboxers" src="BoyBoxers4.png" alt="Boy Boxers 4" style="visibility: hidden;">
+<img id="category11-item5" class="layer boyboxers" src="BoyBoxers5.png" alt="Boy Boxers 5" style="visibility: hidden;">
+<img id="category11-item6" class="layer boyboxers" src="BoyBoxers6.png" alt="Boy Boxers 6" style="visibility: hidden;">
+<img id="category11-item7" class="layer boyboxers" src="BoyBoxers7.png" alt="Boy Boxers 7" style="visibility: hidden;">
+<img id="category11-item8" class="layer boyboxers" src="BoyBoxers8.png" alt="Boy Boxers 8" style="visibility: hidden;">
+<img id="category11-item9" class="layer boyboxers" src="BoyBoxers9.png" alt="Boy Boxers 9" style="visibility: hidden;">
+<img id="category11-item10" class="layer boyboxers" src="BoyBoxers10.png" alt="Boy Boxers 10" style="visibility: hidden;">
+
+<!-- Girl Boxers (Category 12) -->
+<img id="category12-item1" class="layer girlboxers" src="GirlBoxers1.png" alt="Girl Boxers 1" style="visibility: hidden;">
+<img id="category12-item2" class="layer girlboxers" src="GirlBoxers2.png" alt="Girl Boxers 2" style="visibility: hidden;">
+<img id="category12-item3" class="layer girlboxers" src="GirlBoxers3.png" alt="Girl Boxers 3" style="visibility: hidden;">
+<img id="category12-item4" class="layer girlboxers" src="GirlBoxers4.png" alt="Girl Boxers 4" style="visibility: hidden;">
+<img id="category12-item5" class="layer girlboxers" src="GirlBoxers5.png" alt="Girl Boxers 5" style="visibility: hidden;">
+<img id="category12-item6" class="layer girlboxers" src="GirlBoxers6.png" alt="Girl Boxers 6" style="visibility: hidden;">
+<img id="category12-item7" class="layer girlboxers" src="GirlBoxers7.png" alt="Girl Boxers 7" style="visibility: hidden;">
+<img id="category12-item8" class="layer girlboxers" src="GirlBoxers8.png" alt="Girl Boxers 8" style="visibility: hidden;">
+<img id="category12-item9" class="layer girlboxers" src="GirlBoxers9.png" alt="Girl Boxers 9" style="visibility: hidden;">
+<img id="category12-item10" class="layer girlboxers" src="GirlBoxers10.png" alt="Girl Boxers 10" style="visibility: hidden;">
+
+<!-- Boy Sweatshirt (Category 13) -->
+<img id="category13-item1" class="layer boysweatshirt" src="BoySweatshirt1.png" alt="Boy Sweatshirt 1" style="visibility: hidden;">
+<img id="category13-item2" class="layer boysweatshirt" src="BoySweatshirt2.png" alt="Boy Sweatshirt 2" style="visibility: hidden;">
+<img id="category13-item3" class="layer boysweatshirt" src="BoySweatshirt3.png" alt="Boy Sweatshirt 3" style="visibility: hidden;">
+<img id="category13-item4" class="layer boysweatshirt" src="BoySweatshirt4.png" alt="Boy Sweatshirt 4" style="visibility: hidden;">
+<img id="category13-item5" class="layer boysweatshirt" src="BoySweatshirt5.png" alt="Boy Sweatshirt 5" style="visibility: hidden;">
+<img id="category13-item6" class="layer boysweatshirt" src="BoySweatshirt6.png" alt="Boy Sweatshirt 6" style="visibility: hidden;">
+<img id="category13-item7" class="layer boysweatshirt" src="BoySweatshirt7.png" alt="Boy Sweatshirt 7" style="visibility: hidden;">
+<img id="category13-item8" class="layer boysweatshirt" src="BoySweatshirt8.png" alt="Boy Sweatshirt 8" style="visibility: hidden;">
+<img id="category13-item9" class="layer boysweatshirt" src="BoySweatshirt9.png" alt="Boy Sweatshirt 9" style="visibility: hidden;">
+<img id="category13-item10" class="layer boysweatshirt" src="BoySweatshirt10.png" alt="Boy Sweatshirt 10" style="visibility: hidden;">
+
+<!-- Girl Sweatshirt (Category 14) -->
+<img id="category14-item1" class="layer girlsweatshirt" src="GirlSweatshirt1.png" alt="Girl Sweatshirt 1" style="visibility: hidden;">
+<img id="category14-item2" class="layer girlsweatshirt" src="GirlSweatshirt2.png" alt="Girl Sweatshirt 2" style="visibility: hidden;">
+<img id="category14-item3" class="layer girlsweatshirt" src="GirlSweatshirt3.png" alt="Girl Sweatshirt 3" style="visibility: hidden;">
+<img id="category14-item4" class="layer girlsweatshirt" src="GirlSweatshirt4.png" alt="Girl Sweatshirt 4" style="visibility: hidden;">
+<img id="category14-item5" class="layer girlsweatshirt" src="GirlSweatshirt5.png" alt="Girl Sweatshirt 5" style="visibility: hidden;">
+<img id="category14-item6" class="layer girlsweatshirt" src="GirlSweatshirt6.png" alt="Girl Sweatshirt 6" style="visibility: hidden;">
+<img id="category14-item7" class="layer girlsweatshirt" src="GirlSweatshirt7.png" alt="Girl Sweatshirt 7" style="visibility: hidden;">
+<img id="category14-item8" class="layer girlsweatshirt" src="GirlSweatshirt8.png" alt="Girl Sweatshirt 8" style="visibility: hidden;">
+<img id="category14-item9" class="layer girlsweatshirt" src="GirlSweatshirt9.png" alt="Girl Sweatshirt 9" style="visibility: hidden;">
+<img id="category14-item10" class="layer girlsweatshirt" src="GirlSweatshirt10.png" alt="Girl Sweatshirt 10" style="visibility: hidden;">
+
+
+<!-- Boy Top (Category 15) -->
+<img id="category15-item1" class="layer boytop" src="BoyTop1.png" alt="Boy Top 1" style="visibility: hidden;">
+<img id="category15-item2" class="layer boytop" src="BoyTop2.png" alt="Boy Top 2" style="visibility: hidden;">
+<img id="category15-item3" class="layer boytop" src="BoyTop3.png" alt="Boy Top 3" style="visibility: hidden;">
+<img id="category15-item4" class="layer boytop" src="BoyTop4.png" alt="Boy Top 4" style="visibility: hidden;">
+<img id="category15-item5" class="layer boytop" src="BoyTop5.png" alt="Boy Top 5" style="visibility: hidden;">
+<img id="category15-item6" class="layer boytop" src="BoyTop6.png" alt="Boy Top 6" style="visibility: hidden;">
+<img id="category15-item7" class="layer boytop" src="BoyTop7.png" alt="Boy Top 7" style="visibility: hidden;">
+<img id="category15-item8" class="layer boytop" src="BoyTop8.png" alt="Boy Top 8" style="visibility: hidden;">
+<img id="category15-item9" class="layer boytop" src="BoyTop9.png" alt="Boy Top 9" style="visibility: hidden;">
+<img id="category15-item10" class="layer boytop" src="BoyTop10.png" alt="Boy Top 10" style="visibility: hidden;">
+
+<!-- Girl Top (Category 16) -->
+<img id="category16-item1" class="layer girltop" src="GirlTop1.png" alt="Girl Top 1" style="visibility: hidden;">
+<img id="category16-item2" class="layer girltop" src="GirlTop2.png" alt="Girl Top 2" style="visibility: hidden;">
+<img id="category16-item3" class="layer girltop" src="GirlTop3.png" alt="Girl Top 3" style="visibility: hidden;">
+<img id="category16-item4" class="layer girltop" src="GirlTop4.png" alt="Girl Top 4" style="visibility: hidden;">
+<img id="category16-item5" class="layer girltop" src="GirlTop5.png" alt="Girl Top 5" style="visibility: hidden;">
+<img id="category16-item6" class="layer girltop" src="GirlTop6.png" alt="Girl Top 6" style="visibility: hidden;">
+<img id="category16-item7" class="layer girltop" src="GirlTop7.png" alt="Girl Top 7" style="visibility: hidden;">
+<img id="category16-item8" class="layer girltop" src="GirlTop8.png" alt="Girl Top 8" style="visibility: hidden;">
+<img id="category16-item9" class="layer girltop" src="GirlTop9.png" alt="Girl Top 9" style="visibility: hidden;">
+<img id="category16-item10" class="layer girltop" src="GirlTop10.png" alt="Girl Top 10" style="visibility: hidden;">
+
+<!-- Boy Pants (Category 17) -->
+<img id="category17-item1" class="layer boypants" src="BoyPants1.png" alt="Boy Pants 1" style="visibility: hidden;">
+<img id="category17-item2" class="layer boypants" src="BoyPants2.png" alt="Boy Pants 2" style="visibility: hidden;">
+<img id="category17-item3" class="layer boypants" src="BoyPants3.png" alt="Boy Pants 3" style="visibility: hidden;">
+<img id="category17-item4" class="layer boypants" src="BoyPants4.png" alt="Boy Pants 4" style="visibility: hidden;">
+<img id="category17-item5" class="layer boypants" src="BoyPants5.png" alt="Boy Pants 5" style="visibility: hidden;">
+<img id="category17-item6" class="layer boypants" src="BoyPants6.png" alt="Boy Pants 6" style="visibility: hidden;">
+<img id="category17-item7" class="layer boypants" src="BoyPants7.png" alt="Boy Pants 7" style="visibility: hidden;">
+<img id="category17-item8" class="layer boypants" src="BoyPants8.png" alt="Boy Pants 8" style="visibility: hidden;">
+<img id="category17-item9" class="layer boypants" src="BoyPants9.png" alt="Boy Pants 9" style="visibility: hidden;">
+<img id="category17-item10" class="layer boypants" src="BoyPants10.png" alt="Boy Pants 10" style="visibility: hidden;">
+
+<!-- Girl Pants (Category 18) -->
+<img id="category18-item1" class="layer girlpants" src="GirlPants1.png" alt="Girl Pants 1" style="visibility: hidden;">
+<img id="category18-item2" class="layer girlpants" src="GirlPants2.png" alt="Girl Pants 2" style="visibility: hidden;">
+<img id="category18-item3" class="layer girlpants" src="GirlPants3.png" alt="Girl Pants 3" style="visibility: hidden;">
+<img id="category18-item4" class="layer girlpants" src="GirlPants4.png" alt="Girl Pants 4" style="visibility: hidden;">
+<img id="category18-item5" class="layer girlpants" src="GirlPants5.png" alt="Girl Pants 5" style="visibility: hidden;">
+<img id="category18-item6" class="layer girlpants" src="GirlPants6.png" alt="Girl Pants 6" style="visibility: hidden;">
+<img id="category18-item7" class="layer girlpants" src="GirlPants7.png" alt="Girl Pants 7" style="visibility: hidden;">
+<img id="category18-item8" class="layer girlpants" src="GirlPants8.png" alt="Girl Pants 8" style="visibility: hidden;">
+<img id="category18-item9" class="layer girlpants" src="GirlPants9.png" alt="Girl Pants 9" style="visibility: hidden;">
+<img id="category18-item10" class="layer girlpants" src="GirlPants10.png" alt="Girl Pants 10" style="visibility: hidden;">
+
+<!-- Boy Shoes (Category 19) -->
+<img id="category19-item1" class="layer boyshoes" src="BoyShoes1.png" alt="Boy Shoes 1" style="visibility: hidden;">
+<img id="category19-item2" class="layer boyshoes" src="BoyShoes2.png" alt="Boy Shoes 2" style="visibility: hidden;">
+<img id="category19-item3" class="layer boyshoes" src="BoyShoes3.png" alt="Boy Shoes 3" style="visibility: hidden;">
+<img id="category19-item4" class="layer boyshoes" src="BoyShoes4.png" alt="Boy Shoes 4" style="visibility: hidden;">
+<img id="category19-item5" class="layer boyshoes" src="BoyShoes5.png" alt="Boy Shoes 5" style="visibility: hidden;">
+<img id="category19-item6" class="layer boyshoes" src="BoyShoes6.png" alt="Boy Shoes 6" style="visibility: hidden;">
+<img id="category19-item7" class="layer boyshoes" src="BoyShoes7.png" alt="Boy Shoes 7" style="visibility: hidden;">
+<img id="category19-item8" class="layer boyshoes" src="BoyShoes8.png" alt="Boy Shoes 8" style="visibility: hidden;">
+<img id="category19-item9" class="layer boyshoes" src="BoyShoes9.png" alt="Boy Shoes 9" style="visibility: hidden;">
+<img id="category19-item10" class="layer boyshoes" src="BoyShoes10.png" alt="Boy Shoes 10" style="visibility: hidden;">
+
+<!-- Girl Shoes (Category 20) -->
+<img id="category20-item1" class="layer girlshoes" src="GirlShoes1.png" alt="Girl Shoes 1" style="visibility: hidden;">
+<img id="category20-item2" class="layer girlshoes" src="GirlShoes2.png" alt="Girl Shoes 2" style="visibility: hidden;">
+<img id="category20-item3" class="layer girlshoes" src="GirlShoes3.png" alt="Girl Shoes 3" style="visibility: hidden;">
+<img id="category20-item4" class="layer girlshoes" src="GirlShoes4.png" alt="Girl Shoes 4" style="visibility: hidden;">
+<img id="category20-item5" class="layer girlshoes" src="GirlShoes5.png" alt="Girl Shoes 5" style="visibility: hidden;">
+<img id="category20-item6" class="layer girlshoes" src="GirlShoes6.png" alt="Girl Shoes 6" style="visibility: hidden;">
+<img id="category20-item7" class="layer girlshoes" src="GirlShoes7.png" alt="Girl Shoes 7" style="visibility: hidden;">
+<img id="category20-item8" class="layer girlshoes" src="GirlShoes8.png" alt="Girl Shoes 8" style="visibility: hidden;">
+<img id="category20-item9" class="layer girlshoes" src="GirlShoes9.png" alt="Girl Shoes 9" style="visibility: hidden;">
+<img id="category20-item10" class="layer girlshoes" src="GirlShoes10.png" alt="Girl Shoes 10" style="visibility: hidden;">
+
+<!-- Boy Body Hat (Category 21) -->
+<img id="category21-item1" class="layer bodyhat" src="BoyBodyHat1.png" alt="Boy Body Hat 1" style="visibility: visible;">
+<img id="category21-item2" class="layer bodyhat" src="BoyBodyHat2.png" alt="Boy Body Hat 2" style="visibility: hidden;">
+<img id="category21-item3" class="layer bodyhat" src="BoyBodyHat3.png" alt="Boy Body Hat 3" style="visibility: hidden;">
+<img id="category21-item4" class="layer bodyhat" src="BoyBodyHat4.png" alt="Boy Body Hat 4" style="visibility: hidden;">
+<img id="category21-item5" class="layer bodyhat" src="BoyBodyHat5.png" alt="Boy Body Hat 5" style="visibility: hidden;">
+<img id="category21-item6" class="layer bodyhat" src="BoyBodyHat6.png" alt="Boy Body Hat 6" style="visibility: hidden;">
+<img id="category21-item7" class="layer bodyhat" src="BoyBodyHat7.png" alt="Boy Body Hat 7" style="visibility: hidden;">
+<img id="category21-item8" class="layer bodyhat" src="BoyBodyHat8.png" alt="Boy Body Hat 8" style="visibility: hidden;">
+<img id="category21-item9" class="layer bodyhat" src="BoyBodyHat9.png" alt="Boy Body Hat 9" style="visibility: hidden;">
+<img id="category21-item10" class="layer bodyhat" src="BoyBodyHat10.png" alt="Boy Body Hat 10" style="visibility: hidden;">
+
+<!-- Girl Body Hat (Category 22) -->
+<img id="category22-item1" class="layer bodyhat" src="GirlBodyHat1.png" alt="Girl Body Hat 1" style="visibility: hidden;">
+<img id="category22-item2" class="layer bodyhat" src="GirlBodyHat2.png" alt="Girl Body Hat 2" style="visibility: hidden;">
+<img id="category22-item3" class="layer bodyhat" src="GirlBodyHat3.png" alt="Girl Body Hat 3" style="visibility: hidden;">
+<img id="category22-item4" class="layer bodyhat" src="GirlBodyHat4.png" alt="Girl Body Hat 4" style="visibility: hidden;">
+<img id="category22-item5" class="layer bodyhat" src="GirlBodyHat5.png" alt="Girl Body Hat 5" style="visibility: hidden;">
+<img id="category22-item6" class="layer bodyhat" src="GirlBodyHat6.png" alt="Girl Body Hat 6" style="visibility: hidden;">
+<img id="category22-item7" class="layer bodyhat" src="GirlBodyHat7.png" alt="Girl Body Hat 7" style="visibility: hidden;">
+<img id="category22-item8" class="layer bodyhat" src="GirlBodyHat8.png" alt="Girl Body Hat 8" style="visibility: hidden;">
+<img id="category22-item9" class="layer bodyhat" src="GirlBodyHat9.png" alt="Girl Body Hat 9" style="visibility: hidden;">
+<img id="category22-item10" class="layer bodyhat" src="GirlBodyHat10.png" alt="Girl Body Hat 10" style="visibility: hidden;">
+
+<!-- Boy Accessories (Category 23) -->
+<img id="category23-item1" class="layer accessories" src="BoyAccessories1.png" alt="Boy Accessories 1" style="visibility: hidden;">
+<img id="category23-item2" class="layer accessories" src="BoyAccessories2.png" alt="Boy Accessories 2" style="visibility: hidden;">
+<img id="category23-item3" class="layer accessories" src="BoyAccessories3.png" alt="Boy Accessories 3" style="visibility: hidden;">
+<img id="category23-item4" class="layer accessories" src="BoyAccessories4.png" alt="Boy Accessories 4" style="visibility: hidden;">
+<img id="category23-item5" class="layer accessories" src="BoyAccessories5.png" alt="Boy Accessories 5" style="visibility: hidden;">
+<img id="category23-item6" class="layer accessories" src="BoyAccessories6.png" alt="Boy Accessories 6" style="visibility: hidden;">
+<img id="category23-item7" class="layer accessories" src="BoyAccessories7.png" alt="Boy Accessories 7" style="visibility: hidden;">
+<img id="category23-item8" class="layer accessories" src="BoyAccessories8.png" alt="Boy Accessories 8" style="visibility: hidden;">
+<img id="category23-item9" class="layer accessories" src="BoyAccessories9.png" alt="Boy Accessories 9" style="visibility: hidden;">
+<img id="category23-item10" class="layer accessories" src="BoyAccessories10.png" alt="Boy Accessories 10" style="visibility: hidden;">
+
+<!-- Girl Accessories (Category 24) -->
+<img id="category24-item1" class="layer accessories" src="GirlAccessories1.png" alt="Girl Accessories 1" style="visibility: hidden;">
+<img id="category24-item2" class="layer accessories" src="GirlAccessories2.png" alt="Girl Accessories 2" style="visibility: hidden;">
+<img id="category24-item3" class="layer accessories" src="GirlAccessories3.png" alt="Girl Accessories 3" style="visibility: hidden;">
+<img id="category24-item4" class="layer accessories" src="GirlAccessories4.png" alt="Girl Accessories 4" style="visibility: hidden;">
+<img id="category24-item5" class="layer accessories" src="GirlAccessories5.png" alt="Girl Accessories 5" style="visibility: hidden;">
+<img id="category24-item6" class="layer accessories" src="GirlAccessories6.png" alt="Girl Accessories 6" style="visibility: hidden;">
+<img id="category24-item7" class="layer accessories" src="GirlAccessories7.png" alt="Girl Accessories 7" style="visibility: hidden;">
+<img id="category24-item8" class="layer accessories" src="GirlAccessories8.png" alt="Girl Accessories 8" style="visibility: hidden;">
+<img id="category24-item9" class="layer accessories" src="GirlAccessories9.png" alt="Girl Accessories 9" style="visibility: hidden;">
+<img id="category24-item10" class="layer accessories" src="GirlAccessories10.png" alt="Girl Accessories 10" style="visibility: hidden;">
+
+<!-- Boy Dress (Category 25) -->
+<img id="category25-item1" class="layer boydress" src="BoyDress1.png" alt="Boy Dress 1" style="visibility: hidden;">
+<img id="category25-item2" class="layer boydress" src="BoyDress2.png" alt="Boy Dress 2" style="visibility: hidden;">
+<img id="category25-item3" class="layer boydress" src="BoyDress3.png" alt="Boy Dress 3" style="visibility: hidden;">
+<img id="category25-item4" class="layer boydress" src="BoyDress4.png" alt="Boy Dress 4" style="visibility: hidden;">
+<img id="category25-item5" class="layer boydress" src="BoyDress5.png" alt="Boy Dress 5" style="visibility: hidden;">
+<img id="category25-item6" class="layer boydress" src="BoyDress6.png" alt="Boy Dress 6" style="visibility: hidden;">
+<img id="category25-item7" class="layer boydress" src="BoyDress7.png" alt="Boy Dress 7" style="visibility: hidden;">
+<img id="category25-item8" class="layer boydress" src="BoyDress8.png" alt="Boy Dress 8" style="visibility: hidden;">
+<img id="category25-item9" class="layer boydress" src="BoyDress9.png" alt="Boy Dress 9" style="visibility: hidden;">
+<img id="category25-item10" class="layer boydress" src="BoyDress10.png" alt="Boy Dress 10" style="visibility: hidden;">
+
+<!-- Girl Dress (Category 26) -->
+<img id="category26-item1" class="layer girldress" src="GirlDress1.png" alt="Girl Dress 1" style="visibility: hidden;">
+<img id="category26-item2" class="layer girldress" src="GirlDress2.png" alt="Girl Dress 2" style="visibility: hidden;">
+<img id="category26-item3" class="layer girldress" src="GirlDress3.png" alt="Girl Dress 3" style="visibility: hidden;">
+<img id="category26-item4" class="layer girldress" src="GirlDress4.png" alt="Girl Dress 4" style="visibility: hidden;">
+<img id="category26-item5" class="layer girldress" src="GirlDress5.png" alt="Girl Dress 5" style="visibility: hidden;">
+<img id="category26-item6" class="layer girldress" src="GirlDress6.png" alt="Girl Dress 6" style="visibility: hidden;">
+<img id="category26-item7" class="layer girldress" src="GirlDress7.png" alt="Girl Dress 7" style="visibility: hidden;">
+<img id="category26-item8" class="layer girldress" src="GirlDress8.png" alt="Girl Dress 8" style="visibility: hidden;">
+<img id="category26-item9" class="layer girldress" src="GirlDress9.png" alt="Girl Dress 9" style="visibility: hidden;">
+<img id="category26-item10" class="layer girldress" src="GirlDress10.png" alt="Girl Dress 10" style="visibility: hidden;">
+
+<!-- Boy Socks (Category 27) -->
+<img id="category27-item1" class="layer boysocks" src="BoySocks1.png" alt="Boy Socks 1" style="visibility: visible;">
+<img id="category27-item2" class="layer boysocks" src="BoySocks2.png" alt="Boy Socks 2" style="visibility: hidden;">
+<img id="category27-item3" class="layer boysocks" src="BoySocks3.png" alt="Boy Socks 3" style="visibility: hidden;">
+<img id="category27-item4" class="layer boysocks" src="BoySocks4.png" alt="Boy Socks 4" style="visibility: hidden;">
+<img id="category27-item5" class="layer boysocks" src="BoySocks5.png" alt="Boy Socks 5" style="visibility: hidden;">
+<img id="category27-item6" class="layer boysocks" src="BoySocks6.png" alt="Boy Socks 6" style="visibility: hidden;">
+<img id="category27-item7" class="layer boysocks" src="BoySocks7.png" alt="Boy Socks 7" style="visibility: hidden;">
+<img id="category27-item8" class="layer boysocks" src="BoySocks8.png" alt="Boy Socks 8" style="visibility: hidden;">
+<img id="category27-item9" class="layer boysocks" src="BoySocks9.png" alt="Boy Socks 9" style="visibility: hidden;">
+<img id="category27-item10" class="layer boysocks" src="BoySocks10.png" alt="Boy Socks 10" style="visibility: hidden;">
+
+<!-- Girl Socks (Category 28) -->
+<img id="category28-item1" class="layer girlsocks" src="GirlSocks1.png" alt="Girl Socks 1" style="visibility: hidden;">
+<img id="category28-item2" class="layer girlsocks" src="GirlSocks2.png" alt="Girl Socks 2" style="visibility: hidden;">
+<img id="category28-item3" class="layer girlsocks" src="GirlSocks3.png" alt="Girl Socks 3" style="visibility: hidden;">
+<img id="category28-item4" class="layer girlsocks" src="GirlSocks4.png" alt="Girl Socks 4" style="visibility: hidden;">
+<img id="category28-item5" class="layer girlsocks" src="GirlSocks5.png" alt="Girl Socks 5" style="visibility: hidden;">
+<img id="category28-item6" class="layer girlsocks" src="GirlSocks6.png" alt="Girl Socks 6" style="visibility: hidden;">
+<img id="category28-item7" class="layer girlsocks" src="GirlSocks7.png" alt="Girl Socks 7" style="visibility: hidden;">
+<img id="category28-item8" class="layer girlsocks" src="GirlSocks8.png" alt="Girl Socks 8" style="visibility: hidden;">
+<img id="category28-item9" class="layer girlsocks" src="GirlSocks9.png" alt="Girl Socks 9" style="visibility: hidden;">
+<img id="category28-item10" class="layer girlsocks" src="GirlSocks10.png" alt="Girl Socks 10" style="visibility: hidden;">
+
+<!-- Boy Expression (Category 29) -->
+<img id="category29-item1" class="layer boyexpression" src="BoyExpression1.png" alt="Boy Expression 1" style="visibility: hidden;">
+<img id="category29-item2" class="layer boyexpression" src="BoyExpression2.png" alt="Boy Expression 2" style="visibility: hidden;">
+<img id="category29-item3" class="layer boyexpression" src="BoyExpression3.png" alt="Boy Expression 3" style="visibility: hidden;">
+<img id="category29-item4" class="layer boyexpression" src="BoyExpression4.png" alt="Boy Expression 4" style="visibility: hidden;">
+<img id="category29-item5" class="layer boyexpression" src="BoyExpression5.png" alt="Boy Expression 5" style="visibility: hidden;">
+<img id="category29-item6" class="layer boyexpression" src="BoyExpression6.png" alt="Boy Expression 6" style="visibility: hidden;">
+<img id="category29-item7" class="layer boyexpression" src="BoyExpression7.png" alt="Boy Expression 7" style="visibility: hidden;">
+<img id="category29-item8" class="layer boyexpression" src="BoyExpression8.png" alt="Boy Expression 8" style="visibility: hidden;">
+<img id="category29-item9" class="layer boyexpression" src="BoyExpression9.png" alt="Boy Expression 9" style="visibility: hidden;">
+<img id="category29-item10" class="layer boyexpression" src="BoyExpression10.png" alt="Boy Expression 10" style="visibility: hidden;">
+
+<!-- Girl Expression (Category 30) -->
+<img id="category30-item1" class="layer girlexpression" src="GirlExpression1.png" alt="Girl Expression 1" style="visibility: hidden;">
+<img id="category30-item2" class="layer girlexpression" src="GirlExpression2.png" alt="Girl Expression 2" style="visibility: hidden;">
+<img id="category30-item3" class="layer girlexpression" src="GirlExpression3.png" alt="Girl Expression 3" style="visibility: hidden;">
+<img id="category30-item4" class="layer girlexpression" src="GirlExpression4.png" alt="Girl Expression 4" style="visibility: hidden;">
+<img id="category30-item5" class="layer girlexpression" src="GirlExpression5.png" alt="Girl Expression 5" style="visibility: hidden;">
+<img id="category30-item6" class="layer girlexpression" src="GirlExpression6.png" alt="Girl Expression 6" style="visibility: hidden;">
+<img id="category30-item7" class="layer girlexpression" src="GirlExpression7.png" alt="Girl Expression 7" style="visibility: hidden;">
+<img id="category30-item8" class="layer girlexpression" src="GirlExpression8.png" alt="Girl Expression 8" style="visibility: hidden;">
+<img id="category30-item9" class="layer girlexpression" src="GirlExpression9.png" alt="Girl Expression 9" style="visibility: hidden;">
+<img id="category30-item10" class="layer girlexpression" src="GirlExpression10.png" alt="Girl Expression 10" style="visibility: hidden;">
+
+
+        </div>
+
+        <!-- Controls for Selecting Items in Each Category --><div class="controls">
+    <h2>Select Items</h2>
+
+    <!-- Boy Left Eye (Category 1) Selection -->
+    <div class="category">
+        <h3>Boy Left Eye</h3>
+        <div class="section">
+            <img src="BoyLeftEye1b.png" alt="Boy Left Eye 1" onclick="showItem('category1', 1)">
+            <img src="BoyLeftEye2b.png" alt="Boy Left Eye 2" onclick="showItem('category1', 2)">
+            <img src="BoyLeftEye3b.png" alt="Boy Left Eye 3" onclick="showItem('category1', 3)">
+            <img src="BoyLeftEye4b.png" alt="Boy Left Eye 4" onclick="showItem('category1', 4)">
+            <img src="BoyLeftEye5b.png" alt="Boy Left Eye 5" onclick="showItem('category1', 5)">
+            <img src="BoyLeftEye6b.png" alt="Boy Left Eye 6" onclick="showItem('category1', 6)">
+            <img src="BoyLeftEye7b.png" alt="Boy Left Eye 7" onclick="showItem('category1', 7)">
+            <img src="BoyLeftEye8b.png" alt="Boy Left Eye 8" onclick="showItem('category1', 8)">
+            <img src="BoyLeftEye9b.png" alt="Boy Left Eye 9" onclick="showItem('category1', 9)">
+            <img src="BoyLeftEye10b.png" alt="Boy Left Eye 10" onclick="showItem('category1', 10)">
+        </div>
+    </div>
+
+    <!-- Boy Right Eye (Category 2) Selection -->
+    <div class="category">
+        <h3>Boy Right Eye</h3>
+        <div class="section">
+            <img src="BoyRightEye1b.png" alt="Boy Right Eye 1" onclick="showItem('category2', 1)">
+            <img src="BoyRightEye2b.png" alt="Boy Right Eye 2" onclick="showItem('category2', 2)">
+            <img src="BoyRightEye3b.png" alt="Boy Right Eye 3" onclick="showItem('category2', 3)">
+            <img src="BoyRightEye4b.png" alt="Boy Right Eye 4" onclick="showItem('category2', 4)">
+            <img src="BoyRightEye5b.png" alt="Boy Right Eye 5" onclick="showItem('category2', 5)">
+            <img src="BoyRightEye6b.png" alt="Boy Right Eye 6" onclick="showItem('category2', 6)">
+            <img src="BoyRightEye7b.png" alt="Boy Right Eye 7" onclick="showItem('category2', 7)">
+            <img src="BoyRightEye8b.png" alt="Boy Right Eye 8" onclick="showItem('category2', 8)">
+            <img src="BoyRightEye9b.png" alt="Boy Right Eye 9" onclick="showItem('category2', 9)">
+            <img src="BoyRightEye10b.png" alt="Boy Right Eye 10" onclick="showItem('category2', 10)">
+        </div>
+    </div>
+
+    <!-- Boy Mouth (Category 3) Selection -->
+    <div class="category">
+        <h3>Boy Mouth</h3>
+        <div class="section">
+            <img src="BoyMouth1b.png" alt="Boy Mouth 1" onclick="showItem('category3', 1)">
+            <img src="BoyMouth2b.png" alt="Boy Mouth 2" onclick="showItem('category3', 2)">
+            <img src="BoyMouth3b.png" alt="Boy Mouth 3" onclick="showItem('category3', 3)">
+            <img src="BoyMouth4b.png" alt="Boy Mouth 4" onclick="showItem('category3', 4)">
+            <img src="BoyMouth5b.png" alt="Boy Mouth 5" onclick="showItem('category3', 5)">
+            <img src="BoyMouth6b.png" alt="Boy Mouth 6" onclick="showItem('category3', 6)">
+            <img src="BoyMouth7b.png" alt="Boy Mouth 7" onclick="showItem('category3', 7)">
+            <img src="BoyMouth8b.png" alt="Boy Mouth 8" onclick="showItem('category3', 8)">
+            <img src="BoyMouth9b.png" alt="Boy Mouth 9" onclick="showItem('category3', 9)">
+            <img src="BoyMouth10b.png" alt="Boy Mouth 10" onclick="showItem('category3', 10)">
+        </div>
+    </div>
+
+    <!-- Girl Left Eye (Category 4) Selection -->
+    <div class="category">
+        <h3>Girl Left Eye</h3>
+        <div class="section">
+            <img src="GirlLeftEye1b.png" alt="Girl Left Eye 1" onclick="showItem('category4', 1)">
+            <img src="GirlLeftEye2b.png" alt="Girl Left Eye 2" onclick="showItem('category4', 2)">
+            <img src="GirlLeftEye3b.png" alt="Girl Left Eye 3" onclick="showItem('category4', 3)">
+            <img src="GirlLeftEye4b.png" alt="Girl Left Eye 4" onclick="showItem('category4', 4)">
+            <img src="GirlLeftEye5b.png" alt="Girl Left Eye 5" onclick="showItem('category4', 5)">
+            <img src="GirlLeftEye6b.png" alt="Girl Left Eye 6" onclick="showItem('category4', 6)">
+            <img src="GirlLeftEye7b.png" alt="Girl Left Eye 7" onclick="showItem('category4', 7)">
+            <img src="GirlLeftEye8b.png" alt="Girl Left Eye 8" onclick="showItem('category4', 8)">
+            <img src="GirlLeftEye9b.png" alt="Girl Left Eye 9" onclick="showItem('category4', 9)">
+            <img src="GirlLeftEye10b.png" alt="Girl Left Eye 10" onclick="showItem('category4', 10)">
+        </div>
+    </div>
+
+    <!-- Girl Right Eye (Category 5) Selection -->
+    <div class="category">
+        <h3>Girl Right Eye</h3>
+        <div class="section">
+            <img src="GirlRightEye1b.png" alt="Girl Right Eye 1" onclick="showItem('category5', 1)">
+            <img src="GirlRightEye2b.png" alt="Girl Right Eye 2" onclick="showItem('category5', 2)">
+            <img src="GirlRightEye3b.png" alt="Girl Right Eye 3" onclick="showItem('category5', 3)">
+            <img src="GirlRightEye4b.png" alt="Girl Right Eye 4" onclick="showItem('category5', 4)">
+            <img src="GirlRightEye5b.png" alt="Girl Right Eye 5" onclick="showItem('category5', 5)">
+            <img src="GirlRightEye6b.png" alt="Girl Right Eye 6" onclick="showItem('category5', 6)">
+            <img src="GirlRightEye7b.png" alt="Girl Right Eye 7" onclick="showItem('category5', 7)">
+            <img src="GirlRightEye8b.png" alt="Girl Right Eye 8" onclick="showItem('category5', 8)">
+            <img src="GirlRightEye9b.png" alt="Girl Right Eye 9" onclick="showItem('category5', 9)">
+            <img src="GirlRightEye10b.png" alt="Girl Right Eye 10" onclick="showItem('category5', 10)">
+        </div>
+    </div>
+
+    <!-- Girl Mouth (Category 6) Selection -->
+    <div class="category">
+        <h3>Girl Mouth</h3>
+        <div class="section">
+            <img src="GirlMouth1b.png" alt="Girl Mouth 1" onclick="showItem('category6', 1)">
+            <img src="GirlMouth2b.png" alt="Girl Mouth 2" onclick="showItem('category6', 2)">
+            <img src="GirlMouth3b.png" alt="Girl Mouth 3" onclick="showItem('category6', 3)">
+            <img src="GirlMouth4b.png" alt="Girl Mouth 4" onclick="showItem('category6', 4)">
+            <img src="GirlMouth5b.png" alt="Girl Mouth 5" onclick="showItem('category6', 5)">
+            <img src="GirlMouth6b.png" alt="Girl Mouth 6" onclick="showItem('category6', 6)">
+            <img src="GirlMouth7b.png" alt="Girl Mouth 7" onclick="showItem('category6', 7)">
+            <img src="GirlMouth8b.png" alt="Girl Mouth 8" onclick="showItem('category6', 8)">
+            <img src="GirlMouth9b.png" alt="Girl Mouth 9" onclick="showItem('category6', 9)">
+            <img src="GirlMouth10b.png" alt="Girl Mouth 10" onclick="showItem('category6', 10)">
+        </div>
+    </div>
+
+    <!-- Boy Underpants (Category 7) Selection -->
+    <div class="category">
+        <h3>Boy Underpants</h3>
+        <div class="section">
+            <img src="BoyUnderpants1b.png" alt="Boy Underpants 1" onclick="showItem('category7', 1)">
+            <img src="BoyUnderpants2b.png" alt="Boy Underpants 2" onclick="showItem('category7', 2)">
+            <img src="BoyUnderpants3b.png" alt="Boy Underpants 3" onclick="showItem('category7', 3)">
+            <img src="BoyUnderpants4b.png" alt="Boy Underpants 4" onclick="showItem('category7', 4)">
+            <img src="BoyUnderpants5b.png" alt="Boy Underpants 5" onclick="showItem('category7', 5)">
+            <img src="BoyUnderpants6b.png" alt="Boy Underpants 6" onclick="showItem('category7', 6)">
+            <img src="BoyUnderpants7b.png" alt="Boy Underpants 7" onclick="showItem('category7', 7)">
+            <img src="BoyUnderpants8b.png" alt="Boy Underpants 8" onclick="showItem('category7', 8)">
+            <img src="BoyUnderpants9b.png" alt="Boy Underpants 9" onclick="showItem('category7', 9)">
+            <img src="BoyUnderpants10b.png" alt="Boy Underpants 10" onclick="showItem('category7', 10)">
+        </div>
+    </div>
+
+    <!-- Girl Panties (Category 8) Selection -->
+    <div class="category">
+        <h3>Girl Panties</h3>
+        <div class="section">
+            <img src="GirlPanties1b.png" alt="Girl Panties 1" onclick="showItem('category8', 1)">
+            <img src="GirlPanties2b.png" alt="Girl Panties 2" onclick="showItem('category8', 2)">
+            <img src="GirlPanties3b.png" alt="Girl Panties 3" onclick="showItem('category8', 3)">
+            <img src="GirlPanties4b.png" alt="Girl Panties 4" onclick="showItem('category8', 4)">
+            <img src="GirlPanties5b.png" alt="Girl Panties 5" onclick="showItem('category8', 5)">
+            <img src="GirlPanties6b.png" alt="Girl Panties 6" onclick="showItem('category8', 6)">
+            <img src="GirlPanties7b.png" alt="Girl Panties 7" onclick="showItem('category8', 7)">
+            <img src="GirlPanties8b.png" alt="Girl Panties 8" onclick="showItem('category8', 8)">
+            <img src="GirlPanties9b.png" alt="Girl Panties 9" onclick="showItem('category8', 9)">
+            <img src="GirlPanties10b.png" alt="Girl Panties 10" onclick="showItem('category8', 10)">
+        </div>
+    </div>
+
+    <!-- Boy Bra (Category 9) Selection -->
+    <div class="category">
+        <h3>Boy Bra</h3>
+        <div class="section">
+            <img src="BoyBra1b.png" alt="Boy Bra 1" onclick="showItem('category9', 1)">
+            <img src="BoyBra2b.png" alt="Boy Bra 2" onclick="showItem('category9', 2)">
+            <img src="BoyBra3b.png" alt="Boy Bra 3" onclick="showItem('category9', 3)">
+            <img src="BoyBra4b.png" alt="Boy Bra 4" onclick="showItem('category9', 4)">
+            <img src="BoyBra5b.png" alt="Boy Bra 5" onclick="showItem('category9', 5)">
+            <img src="BoyBra6b.png" alt="Boy Bra 6" onclick="showItem('category9', 6)">
+            <img src="BoyBra7b.png" alt="Boy Bra 7" onclick="showItem('category9', 7)">
+            <img src="BoyBra8b.png" alt="Boy Bra 8" onclick="showItem('category9', 8)">
+            <img src="BoyBra9b.png" alt="Boy Bra 9" onclick="showItem('category9', 9)">
+            <img src="BoyBra10b.png" alt="Boy Bra 10" onclick="showItem('category9', 10)">
+        </div>
+    </div>
+
+    <!-- Girl Bra (Category 10) Selection -->
+    <div class="category">
+        <h3>Girl Bra</h3>
+        <div class="section">
+            <img src="GirlBra1b.png" alt="Girl Bra 1" onclick="showItem('category10', 1)">
+            <img src="GirlBra2b.png" alt="Girl Bra 2" onclick="showItem('category10', 2)">
+            <img src="GirlBra3b.png" alt="Girl Bra 3" onclick="showItem('category10', 3)">
+            <img src="GirlBra4b.png" alt="Girl Bra 4" onclick="showItem('category10', 4)">
+            <img src="GirlBra5b.png" alt="Girl Bra 5" onclick="showItem('category10', 5)">
+            <img src="GirlBra6b.png" alt="Girl Bra 6" onclick="showItem('category10', 6)">
+            <img src="GirlBra7b.png" alt="Girl Bra 7" onclick="showItem('category10', 7)">
+            <img src="GirlBra8b.png" alt="Girl Bra 8" onclick="showItem('category10', 8)">
+            <img src="GirlBra9b.png" alt="Girl Bra 9" onclick="showItem('category10', 9)">
+            <img src="GirlBra10b.png" alt="Girl Bra 10" onclick="showItem('category10', 10)">
+        </div>
+    </div>
+
+    <!-- Boy Boxers (Category 11) Selection -->
+    <div class="category">
+        <h3>Boy Boxers</h3>
+        <div class="section">
+            <img src="BoyBoxers1b.png" alt="Boy Boxers 1" onclick="showItem('category11', 1)">
+            <img src="BoyBoxers2b.png" alt="Boy Boxers 2" onclick="showItem('category11', 2)">
+            <img src="BoyBoxers3b.png" alt="Boy Boxers 3" onclick="showItem('category11', 3)">
+            <img src="BoyBoxers4b.png" alt="Boy Boxers 4" onclick="showItem('category11', 4)">
+            <img src="BoyBoxers5b.png" alt="Boy Boxers 5" onclick="showItem('category11', 5)">
+            <img src="BoyBoxers6b.png" alt="Boy Boxers 6" onclick="showItem('category11', 6)">
+            <img src="BoyBoxers7b.png" alt="Boy Boxers 7" onclick="showItem('category11', 7)">
+            <img src="BoyBoxers8b.png" alt="Boy Boxers 8" onclick="showItem('category11', 8)">
+            <img src="BoyBoxers9b.png" alt="Boy Boxers 9" onclick="showItem('category11', 9)">
+            <img src="BoyBoxers10b.png" alt="Boy Boxers 10" onclick="showItem('category11', 10)">
+        </div>
+    </div>
+
+    <!-- Girl Boxers (Category 12) Selection -->
+    <div class="category">
+        <h3>Girl Boxers</h3>
+        <div class="section">
+            <img src="GirlBoxers1b.png" alt="Girl Boxers 1" onclick="showItem('category12', 1)">
+            <img src="GirlBoxers2b.png" alt="Girl Boxers 2" onclick="showItem('category12', 2)">
+            <img src="GirlBoxers3b.png" alt="Girl Boxers 3" onclick="showItem('category12', 3)">
+            <img src="GirlBoxers4b.png" alt="Girl Boxers 4" onclick="showItem('category12', 4)">
+            <img src="GirlBoxers5b.png" alt="Girl Boxers 5" onclick="showItem('category12', 5)">
+            <img src="GirlBoxers6b.png" alt="Girl Boxers 6" onclick="showItem('category12', 6)">
+            <img src="GirlBoxers7b.png" alt="Girl Boxers 7" onclick="showItem('category12', 7)">
+            <img src="GirlBoxers8b.png" alt="Girl Boxers 8" onclick="showItem('category12', 8)">
+            <img src="GirlBoxers9b.png" alt="Girl Boxers 9" onclick="showItem('category12', 9)">
+            <img src="GirlBoxers10b.png" alt="Girl Boxers 10" onclick="showItem('category12', 10)">
+        </div>
+    </div>
+
+    <!-- Boy Sweatshirt (Category 13) Selection -->
+    <div class="category">
+        <h3>Boy Sweatshirt</h3>
+        <div class="section">
+            <img src="BoySweatshirt1b.png" alt="Boy Sweatshirt 1" onclick="showItem('category13', 1)">
+            <img src="BoySweatshirt2b.png" alt="Boy Sweatshirt 2" onclick="showItem('category13', 2)">
+            <img src="BoySweatshirt3b.png" alt="Boy Sweatshirt 3" onclick="showItem('category13', 3)">
+            <img src="BoySweatshirt4b.png" alt="Boy Sweatshirt 4" onclick="showItem('category13', 4)">
+            <img src="BoySweatshirt5b.png" alt="Boy Sweatshirt 5" onclick="showItem('category13', 5)">
+            <img src="BoySweatshirt6b.png" alt="Boy Sweatshirt 6" onclick="showItem('category13', 6)">
+            <img src="BoySweatshirt7b.png" alt="Boy Sweatshirt 7" onclick="showItem('category13', 7)">
+            <img src="BoySweatshirt8b.png" alt="Boy Sweatshirt 8" onclick="showItem('category13', 8)">
+            <img src="BoySweatshirt9b.png" alt="Boy Sweatshirt 9" onclick="showItem('category13', 9)">
+            <img src="BoySweatshirt10b.png" alt="Boy Sweatshirt 10" onclick="showItem('category13', 10)">
+        </div>
+    </div>
+
+    <!-- Girl Sweatshirt (Category 14) Selection -->
+    <div class="category">
+        <h3>Girl Sweatshirt</h3>
+        <div class="section">
+            <img src="GirlSweatshirt1b.png" alt="Girl Sweatshirt 1" onclick="showItem('category14', 1)">
+            <img src="GirlSweatshirt2b.png" alt="Girl Sweatshirt 2" onclick="showItem('category14', 2)">
+            <img src="GirlSweatshirt3b.png" alt="Girl Sweatshirt 3" onclick="showItem('category14', 3)">
+            <img src="GirlSweatshirt4b.png" alt="Girl Sweatshirt 4" onclick="showItem('category14', 4)">
+            <img src="GirlSweatshirt5b.png" alt="Girl Sweatshirt 5" onclick="showItem('category14', 5)">
+            <img src="GirlSweatshirt6b.png" alt="Girl Sweatshirt 6" onclick="showItem('category14', 6)">
+            <img src="GirlSweatshirt7b.png" alt="Girl Sweatshirt 7" onclick="showItem('category14', 7)">
+            <img src="GirlSweatshirt8b.png" alt="Girl Sweatshirt 8" onclick="showItem('category14', 8)">
+            <img src="GirlSweatshirt9b.png" alt="Girl Sweatshirt 9" onclick="showItem('category14', 9)">
+            <img src="GirlSweatshirt10b.png" alt="Girl Sweatshirt 10" onclick="showItem('category14', 10)">
+        </div>
+    </div>
+	
+	    <!-- Boy Top (Category 15) Selection -->
+    <div class="category">
+        <h3>Boy Top</h3>
+        <div class="section">
+            <img src="BoyTop1b.png" alt="Boy Top 1" onclick="showItem('category15', 1)">
+            <img src="BoyTop2b.png" alt="Boy Top 2" onclick="showItem('category15', 2)">
+            <img src="BoyTop3b.png" alt="Boy Top 3" onclick="showItem('category15', 3)">
+            <img src="BoyTop4b.png" alt="Boy Top 4" onclick="showItem('category15', 4)">
+            <img src="BoyTop5b.png" alt="Boy Top 5" onclick="showItem('category15', 5)">
+            <img src="BoyTop6b.png" alt="Boy Top 6" onclick="showItem('category15', 6)">
+            <img src="BoyTop7b.png" alt="Boy Top 7" onclick="showItem('category15', 7)">
+            <img src="BoyTop8b.png" alt="Boy Top 8" onclick="showItem('category15', 8)">
+            <img src="BoyTop9b.png" alt="Boy Top 9" onclick="showItem('category15', 9)">
+            <img src="BoyTop10b.png" alt="Boy Top 10" onclick="showItem('category15', 10)">
+        </div>
+    </div>
+
+    <!-- Girl Top (Category 16) Selection -->
+    <div class="category">
+        <h3>Girl Top</h3>
+        <div class="section">
+            <img src="GirlTop1b.png" alt="Girl Top 1" onclick="showItem('category16', 1)">
+            <img src="GirlTop2b.png" alt="Girl Top 2" onclick="showItem('category16', 2)">
+            <img src="GirlTop3b.png" alt="Girl Top 3" onclick="showItem('category16', 3)">
+            <img src="GirlTop4b.png" alt="Girl Top 4" onclick="showItem('category16', 4)">
+            <img src="GirlTop5b.png" alt="Girl Top 5" onclick="showItem('category16', 5)">
+            <img src="GirlTop6b.png" alt="Girl Top 6" onclick="showItem('category16', 6)">
+            <img src="GirlTop7b.png" alt="Girl Top 7" onclick="showItem('category16', 7)">
+            <img src="GirlTop8b.png" alt="Girl Top 8" onclick="showItem('category16', 8)">
+            <img src="GirlTop9b.png" alt="Girl Top 9" onclick="showItem('category16', 9)">
+            <img src="GirlTop10b.png" alt="Girl Top 10" onclick="showItem('category16', 10)">
+        </div>
+    </div>
+
+    <!-- Boy Pants (Category 17) Selection -->
+    <div class="category">
+        <h3>Boy Pants</h3>
+        <div class="section">
+            <img src="BoyPants1b.png" alt="Boy Pants 1" onclick="showItem('category17', 1)">
+            <img src="BoyPants2b.png" alt="Boy Pants 2" onclick="showItem('category17', 2)">
+            <img src="BoyPants3b.png" alt="Boy Pants 3" onclick="showItem('category17', 3)">
+            <img src="BoyPants4b.png" alt="Boy Pants 4" onclick="showItem('category17', 4)">
+            <img src="BoyPants5b.png" alt="Boy Pants 5" onclick="showItem('category17', 5)">
+            <img src="BoyPants6b.png" alt="Boy Pants 6" onclick="showItem('category17', 6)">
+            <img src="BoyPants7b.png" alt="Boy Pants 7" onclick="showItem('category17', 7)">
+            <img src="BoyPants8b.png" alt="Boy Pants 8" onclick="showItem('category17', 8)">
+            <img src="BoyPants9b.png" alt="Boy Pants 9" onclick="showItem('category17', 9)">
+            <img src="BoyPants10b.png" alt="Boy Pants 10" onclick="showItem('category17', 10)">
+        </div>
+    </div>
+
+    <!-- Girl Pants (Category 18) Selection -->
+    <div class="category">
+        <h3>Girl Pants</h3>
+        <div class="section">
+            <img src="GirlPants1b.png" alt="Girl Pants 1" onclick="showItem('category18', 1)">
+            <img src="GirlPants2b.png" alt="Girl Pants 2" onclick="showItem('category18', 2)">
+            <img src="GirlPants3b.png" alt="Girl Pants 3" onclick="showItem('category18', 3)">
+            <img src="GirlPants4b.png" alt="Girl Pants 4" onclick="showItem('category18', 4)">
+            <img src="GirlPants5b.png" alt="Girl Pants 5" onclick="showItem('category18', 5)">
+            <img src="GirlPants6b.png" alt="Girl Pants 6" onclick="showItem('category18', 6)">
+            <img src="GirlPants7b.png" alt="Girl Pants 7" onclick="showItem('category18', 7)">
+            <img src="GirlPants8b.png" alt="Girl Pants 8" onclick="showItem('category18', 8)">
+            <img src="GirlPants9b.png" alt="Girl Pants 9" onclick="showItem('category18', 9)">
+            <img src="GirlPants10b.png" alt="Girl Pants 10" onclick="showItem('category18', 10)">
+        </div>
+    </div>
+	    <!-- Boy Shoes (Category 19) Selection -->
+    <div class="category">
+        <h3>Boy Shoes</h3>
+        <div class="section">
+            <img src="BoyShoes1b.png" alt="Boy Shoes 1" onclick="showItem('category19', 1)">
+            <img src="BoyShoes2b.png" alt="Boy Shoes 2" onclick="showItem('category19', 2)">
+            <img src="BoyShoes3b.png" alt="Boy Shoes 3" onclick="showItem('category19', 3)">
+            <img src="BoyShoes4b.png" alt="Boy Shoes 4" onclick="showItem('category19', 4)">
+            <img src="BoyShoes5b.png" alt="Boy Shoes 5" onclick="showItem('category19', 5)">
+            <img src="BoyShoes6b.png" alt="Boy Shoes 6" onclick="showItem('category19', 6)">
+            <img src="BoyShoes7b.png" alt="Boy Shoes 7" onclick="showItem('category19', 7)">
+            <img src="BoyShoes8b.png" alt="Boy Shoes 8" onclick="showItem('category19', 8)">
+            <img src="BoyShoes9b.png" alt="Boy Shoes 9" onclick="showItem('category19', 9)">
+            <img src="BoyShoes10b.png" alt="Boy Shoes 10" onclick="showItem('category19', 10)">
+        </div>
+    </div>
+
+    <!-- Girl Shoes (Category 20) Selection -->
+    <div class="category">
+        <h3>Girl Shoes</h3>
+        <div class="section">
+            <img src="GirlShoes1b.png" alt="Girl Shoes 1" onclick="showItem('category20', 1)">
+            <img src="GirlShoes2b.png" alt="Girl Shoes 2" onclick="showItem('category20', 2)">
+            <img src="GirlShoes3b.png" alt="Girl Shoes 3" onclick="showItem('category20', 3)">
+            <img src="GirlShoes4b.png" alt="Girl Shoes 4" onclick="showItem('category20', 4)">
+            <img src="GirlShoes5b.png" alt="Girl Shoes 5" onclick="showItem('category20', 5)">
+            <img src="GirlShoes6b.png" alt="Girl Shoes 6" onclick="showItem('category20', 6)">
+            <img src="GirlShoes7b.png" alt="Girl Shoes 7" onclick="showItem('category20', 7)">
+            <img src="GirlShoes8b.png" alt="Girl Shoes 8" onclick="showItem('category20', 8)">
+            <img src="GirlShoes9b.png" alt="Girl Shoes 9" onclick="showItem('category20', 9)">
+            <img src="GirlShoes10b.png" alt="Girl Shoes 10" onclick="showItem('category20', 10)">
+        </div>
+    </div>
+
+    <!-- Boy Body Hat (Category 21) Selection -->
+    <div class="category">
+        <h3>Boy Body Hat</h3>
+        <div class="section">
+            <img src="BoyBodyHat1b.png" alt="Boy Body Hat 1" onclick="showItem('category21', 1)">
+            <img src="BoyBodyHat2b.png" alt="Boy Body Hat 2" onclick="showItem('category21', 2)">
+            <img src="BoyBodyHat3b.png" alt="Boy Body Hat 3" onclick="showItem('category21', 3)">
+            <img src="BoyBodyHat4b.png" alt="Boy Body Hat 4" onclick="showItem('category21', 4)">
+            <img src="BoyBodyHat5b.png" alt="Boy Body Hat 5" onclick="showItem('category21', 5)">
+            <img src="BoyBodyHat6b.png" alt="Boy Body Hat 6" onclick="showItem('category21', 6)">
+            <img src="BoyBodyHat7b.png" alt="Boy Body Hat 7" onclick="showItem('category21', 7)">
+            <img src="BoyBodyHat8b.png" alt="Boy Body Hat 8" onclick="showItem('category21', 8)">
+            <img src="BoyBodyHat9b.png" alt="Boy Body Hat 9" onclick="showItem('category21', 9)">
+            <img src="BoyBodyHat10b.png" alt="Boy Body Hat 10" onclick="showItem('category21', 10)">
+        </div>
+    </div>
+
+    <!-- Girl Body Hat (Category 22) Selection -->
+    <div class="category">
+        <h3>Girl Body Hat</h3>
+        <div class="section">
+            <img src="GirlBodyHat1b.png" alt="Girl Body Hat 1" onclick="showItem('category22', 1)">
+            <img src="GirlBodyHat2b.png" alt="Girl Body Hat 2" onclick="showItem('category22', 2)">
+            <img src="GirlBodyHat3b.png" alt="Girl Body Hat 3" onclick="showItem('category22', 3)">
+            <img src="GirlBodyHat4b.png" alt="Girl Body Hat 4" onclick="showItem('category22', 4)">
+            <img src="GirlBodyHat5b.png" alt="Girl Body Hat 5" onclick="showItem('category22', 5)">
+            <img src="GirlBodyHat6b.png" alt="Girl Body Hat 6" onclick="showItem('category22', 6)">
+            <img src="GirlBodyHat7b.png" alt="Girl Body Hat 7" onclick="showItem('category22', 7)">
+            <img src="GirlBodyHat8b.png" alt="Girl Body Hat 8" onclick="showItem('category22', 8)">
+            <img src="GirlBodyHat9b.png" alt="Girl Body Hat 9" onclick="showItem('category22', 9)">
+            <img src="GirlBodyHat10b.png" alt="Girl Body Hat 10" onclick="showItem('category22', 10)">
+        </div>
+    </div>
+
+    <!-- Boy Accessories (Category 23) Selection -->
+    <div class="category">
+        <h3>Boy Accessories</h3>
+        <div class="section">
+            <img src="BoyAccessories1b.png" alt="Boy Accessories 1" onclick="showItem('category23', 1)">
+            <img src="BoyAccessories2b.png" alt="Boy Accessories 2" onclick="showItem('category23', 2)">
+            <img src="BoyAccessories3b.png" alt="Boy Accessories 3" onclick="showItem('category23', 3)">
+            <img src="BoyAccessories4b.png" alt="Boy Accessories 4" onclick="showItem('category23', 4)">
+            <img src="BoyAccessories5b.png" alt="Boy Accessories 5" onclick="showItem('category23', 5)">
+            <img src="BoyAccessories6b.png" alt="Boy Accessories 6" onclick="showItem('category23', 6)">
+            <img src="BoyAccessories7b.png" alt="Boy Accessories 7" onclick="showItem('category23', 7)">
+            <img src="BoyAccessories8b.png" alt="Boy Accessories 8" onclick="showItem('category23', 8)">
+            <img src="BoyAccessories9b.png" alt="Boy Accessories 9" onclick="showItem('category23', 9)">
+            <img src="BoyAccessories10b.png" alt="Boy Accessories 10" onclick="showItem('category23', 10)">
+        </div>
+    </div>
+
+    <!-- Girl Accessories (Category 24) Selection -->
+    <div class="category">
+        <h3>Girl Accessories</h3>
+        <div class="section">
+            <img src="GirlAccessories1b.png" alt="Girl Accessories 1" onclick="showItem('category24', 1)">
+            <img src="GirlAccessories2b.png" alt="Girl Accessories 2" onclick="showItem('category24', 2)">
+            <img src="GirlAccessories3b.png" alt="Girl Accessories 3" onclick="showItem('category24', 3)">
+            <img src="GirlAccessories4b.png" alt="Girl Accessories 4" onclick="showItem('category24', 4)">
+            <img src="GirlAccessories5b.png" alt="Girl Accessories 5" onclick="showItem('category24', 5)">
+            <img src="GirlAccessories6b.png" alt="Girl Accessories 6" onclick="showItem('category24', 6)">
+            <img src="GirlAccessories7b.png" alt="Girl Accessories 7" onclick="showItem('category24', 7)">
+            <img src="GirlAccessories8b.png" alt="Girl Accessories 8" onclick="showItem('category24', 8)">
+            <img src="GirlAccessories9b.png" alt="Girl Accessories 9" onclick="showItem('category24', 9)">
+            <img src="GirlAccessories10b.png" alt="Girl Accessories 10" onclick="showItem('category24', 10)">
+        </div>
+    </div>
+
+    <!-- Boy Dress (Category 25) Selection -->
+    <div class="category">
+        <h3>Boy Dress</h3>
+        <div class="section">
+            <img src="BoyDress1b.png" alt="Boy Dress 1" onclick="showItem('category25', 1)">
+            <img src="BoyDress2b.png" alt="Boy Dress 2" onclick="showItem('category25', 2)">
+            <img src="BoyDress3b.png" alt="Boy Dress 3" onclick="showItem('category25', 3)">
+            <img src="BoyDress4b.png" alt="Boy Dress 4" onclick="showItem('category25', 4)">
+            <img src="BoyDress5b.png" alt="Boy Dress 5" onclick="showItem('category25', 5)">
+            <img src="BoyDress6b.png" alt="Boy Dress 6" onclick="showItem('category25', 6)">
+            <img src="BoyDress7b.png" alt="Boy Dress 7" onclick="showItem('category25', 7)">
+            <img src="BoyDress8b.png" alt="Boy Dress 8" onclick="showItem('category25', 8)">
+            <img src="BoyDress9b.png" alt="Boy Dress 9" onclick="showItem('category25', 9)">
+            <img src="BoyDress10b.png" alt="Boy Dress 10" onclick="showItem('category25', 10)">
+        </div>
+    </div>
+
+    <!-- Girl Dress (Category 26) Selection -->
+    <div class="category">
+        <h3>Girl Dress</h3>
+        <div class="section">
+            <img src="GirlDress1b.png" alt="Girl Dress 1" onclick="showItem('category26', 1)">
+            <img src="GirlDress2b.png" alt="Girl Dress 2" onclick="showItem('category26', 2)">
+            <img src="GirlDress3b.png" alt="Girl Dress 3" onclick="showItem('category26', 3)">
+            <img src="GirlDress4b.png" alt="Girl Dress 4" onclick="showItem('category26', 4)">
+            <img src="GirlDress5b.png" alt="Girl Dress 5" onclick="showItem('category26', 5)">
+            <img src="GirlDress6b.png" alt="Girl Dress 6" onclick="showItem('category26', 6)">
+            <img src="GirlDress7b.png" alt="Girl Dress 7" onclick="showItem('category26', 7)">
+            <img src="GirlDress8b.png" alt="Girl Dress 8" onclick="showItem('category26', 8)">
+            <img src="GirlDress9b.png" alt="Girl Dress 9" onclick="showItem('category26', 9)">
+            <img src="GirlDress10b.png" alt="Girl Dress 10" onclick="showItem('category26', 10)">
+        </div>
+    </div>
+	<!-- Boy Socks (Category 27) Selection -->
+<div class="category">
+    <h3>Boy Socks</h3>
+    <div class="section">
+        <img src="BoySocks1b.png" alt="Boy Socks 1" onclick="showItem('category27', 1)">
+        <img src="BoySocks2b.png" alt="Boy Socks 2" onclick="showItem('category27', 2)">
+        <img src="BoySocks3b.png" alt="Boy Socks 3" onclick="showItem('category27', 3)">
+        <img src="BoySocks4b.png" alt="Boy Socks 4" onclick="showItem('category27', 4)">
+        <img src="BoySocks5b.png" alt="Boy Socks 5" onclick="showItem('category27', 5)">
+        <img src="BoySocks6b.png" alt="Boy Socks 6" onclick="showItem('category27', 6)">
+        <img src="BoySocks7b.png" alt="Boy Socks 7" onclick="showItem('category27', 7)">
+        <img src="BoySocks8b.png" alt="Boy Socks 8" onclick="showItem('category27', 8)">
+        <img src="BoySocks9b.png" alt="Boy Socks 9" onclick="showItem('category27', 9)">
+        <img src="BoySocks10b.png" alt="Boy Socks 10" onclick="showItem('category27', 10)">
+    </div>
+</div>
+
+<!-- Girl Socks (Category 28) Selection -->
+<div class="category">
+    <h3>Girl Socks</h3>
+    <div class="section">
+        <img src="GirlSocks1b.png" alt="Girl Socks 1" onclick="showItem('category28', 1)">
+        <img src="GirlSocks2b.png" alt="Girl Socks 2" onclick="showItem('category28', 2)">
+        <img src="GirlSocks3b.png" alt="Girl Socks 3" onclick="showItem('category28', 3)">
+        <img src="GirlSocks4b.png" alt="Girl Socks 4" onclick="showItem('category28', 4)">
+        <img src="GirlSocks5b.png" alt="Girl Socks 5" onclick="showItem('category28', 5)">
+        <img src="GirlSocks6b.png" alt="Girl Socks 6" onclick="showItem('category28', 6)">
+        <img src="GirlSocks7b.png" alt="Girl Socks 7" onclick="showItem('category28', 7)">
+        <img src="GirlSocks8b.png" alt="Girl Socks 8" onclick="showItem('category28', 8)">
+        <img src="GirlSocks9b.png" alt="Girl Socks 9" onclick="showItem('category28', 9)">
+        <img src="GirlSocks10b.png" alt="Girl Socks 10" onclick="showItem('category28', 10)">
+    </div>
+</div>
+
+<!-- Boy Expression (Category 29) Selection -->
+<div class="category">
+    <h3>Boy Expression</h3>
+    <div class="section">
+        <img src="BoyExpression1b.png" alt="Boy Expression 1" onclick="showItem('category29', 1)">
+        <img src="BoyExpression2b.png" alt="Boy Expression 2" onclick="showItem('category29', 2)">
+        <img src="BoyExpression3b.png" alt="Boy Expression 3" onclick="showItem('category29', 3)">
+        <img src="BoyExpression4b.png" alt="Boy Expression 4" onclick="showItem('category29', 4)">
+        <img src="BoyExpression5b.png" alt="Boy Expression 5" onclick="showItem('category29', 5)">
+        <img src="BoyExpression6b.png" alt="Boy Expression 6" onclick="showItem('category29', 6)">
+        <img src="BoyExpression7b.png" alt="Boy Expression 7" onclick="showItem('category29', 7)">
+        <img src="BoyExpression8b.png" alt="Boy Expression 8" onclick="showItem('category29', 8)">
+        <img src="BoyExpression9b.png" alt="Boy Expression 9" onclick="showItem('category29', 9)">
+        <img src="BoyExpression10b.png" alt="Boy Expression 10" onclick="showItem('category29', 10)">
+    </div>
+</div>
+
+<!-- Girl Expression (Category 30) Selection -->
+<div class="category">
+    <h3>Girl Expression</h3>
+    <div class="section">
+        <img src="GirlExpression1b.png" alt="Girl Expression 1" onclick="showItem('category30', 1)">
+        <img src="GirlExpression2b.png" alt="Girl Expression 2" onclick="showItem('category30', 2)">
+        <img src="GirlExpression3b.png" alt="Girl Expression 3" onclick="showItem('category30', 3)">
+        <img src="GirlExpression4b.png" alt="Girl Expression 4" onclick="showItem('category30', 4)">
+        <img src="GirlExpression5b.png" alt="Girl Expression 5" onclick="showItem('category30', 5)">
+        <img src="GirlExpression6b.png" alt="Girl Expression 6" onclick="showItem('category30', 6)">
+        <img src="GirlExpression7b.png" alt="Girl Expression 7" onclick="showItem('category30', 7)">
+        <img src="GirlExpression8b.png" alt="Girl Expression 8" onclick="showItem('category30', 8)">
+        <img src="GirlExpression9b.png" alt="Girl Expression 9" onclick="showItem('category30', 9)">
+        <img src="GirlExpression10b.png" alt="Girl Expression 10" onclick="showItem('category30', 10)">
+    </div>
+</div>
+</div>
+
+
+	
+
+    <!-- Link to External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

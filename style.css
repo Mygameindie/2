@@ -1,0 +1,372 @@
+/* Global Styles */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Main Menu */
+.main-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.main-menu img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.main-menu button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #6200ea;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+    transition: background-color 0.3s;
+}
+
+.main-menu button:hover {
+    background-color: #3700b3;
+}
+
+/* Game Container */
+.game-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+/* Base Container */
+.base-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 10px 0;
+}
+
+#base-image {
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+/* Layer Styles */
+.layer {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    visibility: hidden; /* Managed by JavaScript */
+}
+
+/* Base Layer */
+#base-image {
+    z-index: 1;
+}
+
+/* Layered Items with Category-Specific Z-Index */
+/* Boy Left Eye (Category 1) */
+#category1-item1, #category1-item2, #category1-item3, #category1-item4,
+#category1-item5, #category1-item6, #category1-item7, #category1-item8,
+#category1-item9, #category1-item10 {
+    z-index: 2;
+}
+
+/* Boy Right Eye (Category 2) */
+#category2-item1, #category2-item2, #category2-item3, #category2-item4,
+#category2-item5, #category2-item6, #category2-item7, #category2-item8,
+#category2-item9, #category2-item10 {
+    z-index: 3;
+}
+
+/* Boy Mouth (Category 3) */
+#category3-item1, #category3-item2, #category3-item3, #category3-item4,
+#category3-item5, #category3-item6, #category3-item7, #category3-item8,
+#category3-item9, #category3-item10 {
+    z-index: 4;
+}
+
+/* Girl Left Eye (Category 4) */
+#category4-item1, #category4-item2, #category4-item3, #category4-item4,
+#category4-item5, #category4-item6, #category4-item7, #category4-item8,
+#category4-item9, #category4-item10 {
+    z-index: 5;
+}
+
+/* Girl Right Eye (Category 5) */
+#category5-item1, #category5-item2, #category5-item3, #category5-item4,
+#category5-item5, #category5-item6, #category5-item7, #category5-item8,
+#category5-item9, #category5-item10 {
+    z-index: 6;
+}
+
+/* Girl Mouth (Category 6) */
+#category6-item1, #category6-item2, #category6-item3, #category6-item4,
+#category6-item5, #category6-item6, #category6-item7, #category6-item8,
+#category6-item9, #category6-item10 {
+    z-index: 7;
+}
+
+/* Boy Underpants (Category 7) */
+#category7-item1, #category7-item2, #category7-item3, #category7-item4,
+#category7-item5, #category7-item6, #category7-item7, #category7-item8,
+#category7-item9, #category7-item10 {
+    z-index: 8;
+}
+
+/* Girl Panties (Category 8) */
+#category8-item1, #category8-item2, #category8-item3, #category8-item4,
+#category8-item5, #category8-item6, #category8-item7, #category8-item8,
+#category8-item9, #category8-item10 {
+    z-index: 9;
+}
+
+/* Boy Bra (Category 9) */
+#category9-item1, #category9-item2, #category9-item3, #category9-item4,
+#category9-item5, #category9-item6, #category9-item7, #category9-item8,
+#category9-item9, #category9-item10 {
+    z-index: 10;
+}
+
+/* Girl Bra (Category 10) */
+#category10-item1, #category10-item2, #category10-item3, #category10-item4,
+#category10-item5, #category10-item6, #category10-item7, #category10-item8,
+#category10-item9, #category10-item10 {
+    z-index: 11;
+}
+
+/* Boy Boxers (Category 11) */
+#category11-item1, #category11-item2, #category11-item3, #category11-item4,
+#category11-item5, #category11-item6, #category11-item7, #category11-item8,
+#category11-item9, #category11-item10 {
+    z-index: 12;
+}
+
+/* Girl Boxers (Category 12) */
+#category12-item1, #category12-item2, #category12-item3, #category12-item4,
+#category12-item5, #category12-item6, #category12-item7, #category12-item8,
+#category12-item9, #category12-item10 {
+    z-index: 13;
+}
+
+/* Boy Sweatshirt (Category 13) */
+#category13-item1, #category13-item2, #category13-item3, #category13-item4,
+#category13-item5, #category13-item6, #category13-item7, #category13-item8,
+#category13-item9, #category13-item10 {
+    z-index: 14;
+}
+
+/* Girl Sweatshirt (Category 14) */
+#category14-item1, #category14-item2, #category14-item3, #category14-item4,
+#category14-item5, #category14-item6, #category14-item7, #category14-item8,
+#category14-item9, #category14-item10 {
+    z-index: 15;
+}
+
+/* Boy Top (Category 15) */
+#category15-item1, #category15-item2, #category15-item3, #category15-item4,
+#category15-item5, #category15-item6, #category15-item7, #category15-item8,
+#category15-item9, #category15-item10 {
+    z-index: 16;
+}
+
+/* Girl Top (Category 16) */
+#category16-item1, #category16-item2, #category16-item3, #category16-item4,
+#category16-item5, #category16-item6, #category16-item7, #category16-item8,
+#category16-item9, #category16-item10 {
+    z-index: 17;
+}
+
+/* Boy Pants (Category 17) */
+#category17-item1, #category17-item2, #category17-item3, #category17-item4,
+#category17-item5, #category17-item6, #category17-item7, #category17-item8,
+#category17-item9, #category17-item10 {
+    z-index: 18;
+}
+
+/* Girl Pants (Category 18) */
+#category18-item1, #category18-item2, #category18-item3, #category18-item4,
+#category18-item5, #category18-item6, #category18-item7, #category18-item8,
+#category18-item9, #category18-item10 {
+    z-index: 19;
+}
+
+/* Boy Shoes (Category 19) */
+#category19-item1, #category19-item2, #category19-item3, #category19-item4,
+#category19-item5, #category19-item6, #category19-item7, #category19-item8,
+#category19-item9, #category19-item10 {
+    z-index: 20;
+}
+
+/* Girl Shoes (Category 20) */
+#category20-item1, #category20-item2, #category20-item3, #category20-item4,
+#category20-item5, #category20-item6, #category20-item7, #category20-item8,
+#category20-item9, #category20-item10 {
+    z-index: 21;
+}
+
+/* Boy Body Hat (Category 21) */
+#category21-item1, #category21-item2, #category21-item3, #category21-item4,
+#category21-item5, #category21-item6, #category21-item7, #category21-item8,
+#category21-item9, #category21-item10 {
+    z-index: 22;
+}
+
+/* Girl Body Hat (Category 22) */
+#category22-item1, #category22-item2, #category22-item3, #category22-item4,
+#category22-item5, #category22-item6, #category22-item7, #category22-item8,
+#category22-item9, #category22-item10 {
+    z-index: 23;
+}
+
+/* Boy Accessories (Category 23) */
+#category23-item1, #category23-item2, #category23-item3, #category23-item4,
+#category23-item5, #category23-item6, #category23-item7, #category23-item8,
+#category23-item9, #category23-item10 {
+    z-index: 24;
+}
+
+/* Girl Accessories (Category 24) */
+#category24-item1, #category24-item2, #category24-item3, #category24-item4,
+#category24-item5, #category24-item6, #category24-item7, #category24-item8,
+#category24-item9, #category24-item10 {
+    z-index: 25;
+}
+
+/* Boy Dress (Category 25) */
+#category25-item1, #category25-item2, #category25-item3, #category25-item4,
+#category25-item5, #category25-item6, #category25-item7, #category25-item8,
+#category25-item9, #category25-item10 {
+    z-index: 26;
+}
+
+/* Girl Dress (Category 26) */
+#category26-item1, #category26-item2, #category26-item3, #category26-item4,
+#category26-item5, #category26-item6, #category26-item7, #category26-item8,
+#category26-item9, #category26-item10 {
+    z-index: 27;
+}
+
+/* Boy Socks (Category 27) */
+#category27-item1, #category27-item2, #category27-item3, #category27-item4,
+#category27-item5, #category27-item6, #category27-item7, #category27-item8,
+#category27-item9, #category27-item10 {
+    z-index: 28;
+}
+
+/* Girl Socks (Category 28) */
+#category28-item1, #category28-item2, #category28-item3, #category28-item4,
+#category28-item5, #category28-item6, #category28-item7, #category28-item8,
+#category28-item9, #category28-item10 {
+    z-index: 29;
+}
+
+/* Boy Expression (Category 29) */
+#category29-item1, #category29-item2, #category29-item3, #category29-item4,
+#category29-item5, #category29-item6, #category29-item7, #category29-item8,
+#category29-item9, #category29-item10 {
+    z-index: 30;
+}
+
+/* Girl Expression (Category 30) */
+#category30-item1, #category30-item2, #category30-item3, #category30-item4,
+#category30-item5, #category30-item6, #category30-item7, #category30-item8,
+#category30-item9, #category30-item10 {
+    z-index: 31;
+}
+
+/* Controls */
+.controls {
+    margin-top: 15px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.controls h2 {
+    font-size: 22px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Category and Section */
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+}
+
+/* Category Header */
+.category h3 {
+    font-size: 16px;
+    color: #6200ea;
+    text-align: center;
+    margin: 10px 0 5px;
+}
+
+/* Thumbnail Images */
+.category img {
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: border-color 0.3s ease;
+}
+
+.category img:hover {
+    border-color: #3700b3;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 600px) {
+    .main-menu img, .base-container {
+        max-width: 300px;
+    }
+
+    .main-menu button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .controls h2 {
+        font-size: 20px;
+    }
+
+    .category img {
+        width: 40px;
+        height: 40px;
+    }
+}
